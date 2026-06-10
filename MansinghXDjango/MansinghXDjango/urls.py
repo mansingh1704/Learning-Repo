@@ -26,4 +26,6 @@ urlpatterns = [
     path('connectMansingh/', views.connectMansingh, name="Connect | Mansingh"),
     path('PowerRangers/', include('PowerRangers.urls')), 
    #include a file of a app as when we hit the PowerRangers it will ctrl tranfer to that apps url
+
+   path("__reload__/",include("django_browser_reload.urls")),
 ]
