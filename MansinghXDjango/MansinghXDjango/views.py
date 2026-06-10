@@ -5,6 +5,8 @@ from django.shortcuts import render
 # Now we make methods for different things which can be named differently
 # like mansinghhome, nagraj, billu etc etc
 
+# format---> return render(request, path/name of the html file)
+
 def homeMansingh(request):
     # return HttpResponse("Hello World, Welcome to the home page of MansinghAndDjango")
     return render(request, 'website/index.html')  #this render will load the file on  webpage
