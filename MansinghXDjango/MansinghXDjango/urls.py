@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path , include
 from . import views  #importing views.py from current directory
 
 
@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homeMansingh, name="Home | Mansingh"), 
     path('aboutMansingh/', views.aboutMansingh, name="About| Mansingh"), 
-    path('connectMansingh/', views.connectMansingh, name="Connect | Mansingh")
-    
+    path('connectMansingh/', views.connectMansingh, name="Connect | Mansingh"),
+    path('AllPowerRangers/', include('PowerRangers.urls')), 
+   #include a file of a app as when we hit the PowerRangers it will ctrl tranfer to that apps url
 ]
