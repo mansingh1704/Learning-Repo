@@ -24,6 +24,6 @@ urlpatterns = [
     path('', views.homeMansingh, name="Home | Mansingh"), 
     path('aboutMansingh/', views.aboutMansingh, name="About| Mansingh"), 
     path('connectMansingh/', views.connectMansingh, name="Connect | Mansingh"),
-    path('AllPowerRangers/', include('PowerRangers.urls')), 
+    path('PowerRangers/', include('PowerRangers.urls')), 
    #include a file of a app as when we hit the PowerRangers it will ctrl tranfer to that apps url
 ]
