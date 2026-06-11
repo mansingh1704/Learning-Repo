@@ -8,7 +8,7 @@
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-orange-400: oklch(75% 0.183 55.934);
+    --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-black: #000;
     --text-5xl: 3rem;
@@ -359,11 +359,11 @@
   .justify-center {
     justify-content: center;
   }
+  .bg-blue-400 {
+    background-color: var(--color-blue-400);
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
-  }
-  .bg-orange-400 {
-    background-color: var(--color-orange-400);
   }
   .font-serif {
     font-family: var(--font-serif);
