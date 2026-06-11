@@ -19,5 +19,8 @@ class RangerTypes(models.Model):
 
     type = models.CharField(max_length=3, choices = RANGER_TYPE_CHOICE)
 
+    def __str__(self):
+        return self.name
+
 
     
