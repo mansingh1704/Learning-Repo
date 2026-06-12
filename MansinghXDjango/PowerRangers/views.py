@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from .models import RangerTypes
 
 # Create your views here.
 
 def all_rangers(request):
-    return render(request, 'rangers/all_rangers.html')
+    rangers = RangerTypes.objects.all()
+    return render(request, 'rangers/all_rangers.html', {"rangers": rangers})
