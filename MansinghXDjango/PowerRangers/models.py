@@ -25,7 +25,7 @@ class RangerTypes(models.Model):
         return self.name #to inject in admin
 
 
-# One to Many   (like for one ranger there can be many reviews)
+# One to Many   (like for one ranger there can be many reviews)(foreign key is only for one to many relation)
 
 class RangerReview(models.Model):
     ran_ger=models.ForeignKey(RangerTypes, on_delete=models.CASCADE, related_name='reviews')
@@ -44,10 +44,10 @@ class RangerReview(models.Model):
 class RangerStores(models.Model):
     storeName=models.CharField(max_length = 50)
     storeLocated = models.TextField()
-    ranger_type = models.ManyToManyField(RangerTypes,related_name= "Location_of_Store")   # how many variety are available at particular location
+    ranger_type_available = models.ManyToManyField(RangerTypes, related_name= "Location_of_Store")   # how many variety are available at particular location
    
     def __str__(self):
-        return self.name
+        return self.storeName
     
 
 # One to One (suppose the special ability of each ranger is unique do its a one to one relation)
