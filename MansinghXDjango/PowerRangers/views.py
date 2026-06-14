@@ -7,3 +7,6 @@ from django.shortcuts import get_object_or_404
 def all_rangers(request):
     rangers = RangerTypes.objects.all()
     return render(request, 'ranger/all_rangers.html', { 'rangers': rangers})
+
+def ranger_store_view(request):
+    return render(request, 'ranger/ranger_stores.html')
