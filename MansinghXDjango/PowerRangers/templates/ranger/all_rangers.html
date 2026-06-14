@@ -1,0 +1,22 @@
+{% extends "layouts.html" %}
+
+{% block Title %}
+Rangers | Home Page
+{% endblock %}
+
+{% block Content %}
+<h1>All rangers for you</h1>
+
+<div class="grid grid-cols-3 gap-4 m-4">
+
+    {% for ranger in rangers %}
+    <div class="bg-gray-400 p-5">
+        <img class="rounded" src="{{ ranger.image.url }}" alt="{{ ranger.name }}">
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
+
+

@@ -5,4 +5,4 @@ from .models import RangerTypes
 
 def all_rangers(request):
     rangers = RangerTypes.objects.all()
-    return render(request, 'rangers/all_rangers.html', {"rangers": rangers})
+    return render(request, 'ranger/all_rangers.html', { 'rangers': rangers})

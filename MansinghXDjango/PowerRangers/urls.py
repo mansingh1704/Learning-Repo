@@ -2,7 +2,7 @@
 
 
 from django.urls import path
-from . import views  #importing views.py from current directory
+from .import views  #importing views.py from current directory
 
 #localhost:8000/PowerRangers
 urlpatterns = [

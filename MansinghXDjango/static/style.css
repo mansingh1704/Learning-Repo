@@ -1,16 +1,28 @@
-body{
-    background-color: rgb(57, 48, 239);
-    color: #FFFFFF;
+html, body{
+    background-color: rgb(71, 206, 255) !important;
+    color: #dc2c2c !important;
+    margin: 0;
+    min-height: 100%;
 }
 
 h1{
-    color: rgb(12, 52, 137);
+    color: rgb(37, 43, 242) !important;
     text-align: center;
-    font: 3em;
+    font-size: 2em;
 }
 
 p{
-    color: rgb(12, 52, 137);
+    color: rgb(6, 85, 255);
     text-align: center;
-    font: 0.5em;
+    font-size: 0.5em;
+}
+
+.rounded {
+    border-radius: 1rem;
+}
+
+.items img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }

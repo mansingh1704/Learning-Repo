@@ -11,6 +11,7 @@ class RangerTypes(models.Model):
         ('BLU', 'BLUE RANGER'),
         ('GRN', 'GREEN RANGER'),
         ('GLD', 'GOLDEN RANGER'),
+        ('BLK', 'BLACK RANGER'),
     ]
 
     name = models.CharField(max_length=80)
@@ -20,7 +21,7 @@ class RangerTypes(models.Model):
     type = models.CharField(max_length=3, choices = RANGER_TYPE_CHOICE)
 
     def __str__(self):
-        return self.name
+        return self.name 
 
 
     

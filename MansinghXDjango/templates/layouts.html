@@ -1,5 +1,4 @@
 {% load static tailwind_tags %}
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -10,16 +9,17 @@
     <title>
         {% block Title%} Default value{% endblock %} 
     </title>
-    <link rel="stylesheet" href={% static 'style.css' %}>
-    
     {% tailwind_css %}
-
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        html, body { background-color: rgb(71, 206, 255) !important; color: #dc2c2c !important; }
+        h1 { color: rgb(37, 43, 242) !important; }
+        .rounded { border-radius: 1rem !important; }
+    </style>
 </head>
 <body>
     <nav>This is the navbar</nav>
     {% block Content %} Default value{% endblock %}
-
-    <header>Welcome to the webpage</header>
     
 </body>
 </html>
