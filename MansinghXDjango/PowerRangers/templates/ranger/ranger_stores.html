@@ -1,4 +1,25 @@
 {% extends "layouts.html" %}
+
 {% block Content %}
 this is for FORMS
+<form method='POST'>
+    {% csrf_token %} 
+    {% comment %} whenever making a form always use csrf token so to avoind and vulneberilityand injections {% endcomment %}
+    {{form.as_p}}
+    
+    <button type="submit">Search Store</button>
+</form>
+
+
+{% if stores  %}
+    <h2>Stores available</h2>
+    <ul>
+        {% for store in stores %}
+            <li> {{ store.storeName }} / {{ store.storeLocated }}</li>
+        {% endfor %}
+
+    </ul>
+
+{% endif %}
+
 {% endblock %}
